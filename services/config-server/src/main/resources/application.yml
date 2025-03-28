@@ -5,9 +5,9 @@ spring:
     name: config-server
   cloud:
     config:
-      native:
-        search-location: classpath:/configurations
-
+      server:
+        native:
+          search-locations: classpath:/configurations
 
 server:
   port: 8888
