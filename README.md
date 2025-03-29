@@ -10,10 +10,13 @@ This project is a real-time order processing system built using Spring Boot Micr
 
 🔹 Tech Stack
 Spring Boot (for microservices)
+
 Kafka (for event-driven communication)
+
 Spring Cloud (for service discovery, API Gateway, Config)
-PostgreSQL (for data persistence)
-Redis (for caching and real-time order tracking)
+
+PostgreSQL & MongoDB (for data persistence)
+
 Docker & Kubernetes (for deployment)
 
 🔹 Microservices Involved
