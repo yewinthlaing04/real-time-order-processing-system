@@ -10,7 +10,7 @@ eureka:
     hostname: localhost
   client:
     register-with-eureka: false # not allow to register to himself
-    fetch-registry: false # not fetch from registry
+    fetch-registry: false # not fetch from registry for himself
     service-url:
       defaultZone: http://${eureka.instance.hostname}/${server.port}/eureka
 

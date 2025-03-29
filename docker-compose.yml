@@ -3,16 +3,16 @@ services:
     container_name: ms_pg_sql
     image: postgres
     environment:
-      POSTGRES_USER: ye
-      POSTGRES_PASSWORD: ye
+      POSTGRES_USER: yewinthlaing
+      POSTGRES_PASSWORD: yewinthlaing
       PGDATA: /var/lib/postgresql/data
     volumes:
       - postgres:/var/lib/postgresql/data
     ports:
       - 5432:5432
     networks:
-      - microservice-net
-    restart: unless-stopped   # if container stop , restart
+      - microservices-net
+    restart: unless-stopped
 
   pgadmin:
     container_name: ms_pg_admin
@@ -26,7 +26,7 @@ services:
     ports:
       - 5050:80
     networks:
-      - microservice-net
+      - microservices-net
     restart: unless-stopped
 
   mongodb:
@@ -37,19 +37,19 @@ services:
     volumes:
       - mongo:/data
     environment:
-      MONGO_INITDB_ROOT_USERNAME: ye
-      MONGO_INITDB_ROOT_PASSWORD: ye
+      - MONGO_INITDB_ROOT_USERNAME=yewinthlaing
+      - MONGO_INITDB_ROOT_PASSWORD=yewinthlaing
 
   mongo-express:
-    container_name: ms_mongo_express
     image: mongo-express
-    restart: always
+    container_name: mongo-express
+    restart: unless-stopped
     ports:
       - 8081:8081
     environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: ye
-      ME_CONFIG_MONGODB_ADMINPASSWORD: ye
-      ME_CONFIG_MONGODB_SERVER: mongodb
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=yewinthlaing
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=yewinthlaing
+      - ME_CONFIG_MONGODB_SERVER=mongodb
 
   mail-dev:
     container_name: ms_mail_dev
@@ -59,8 +59,8 @@ services:
       - 1025:1025
 
 networks:
-  microservice-net:
-    driver: bridge
+  microservices-net:
+    driver: "bridge"
 
 volumes:
   postgres:
