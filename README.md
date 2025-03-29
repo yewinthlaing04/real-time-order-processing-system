@@ -9,6 +9,7 @@ This project is a real-time order processing system built using Spring Boot Micr
 🛠️ System Architecture
 
 🔹 Tech Stack
+
 Spring Boot (for microservices)
 
 Kafka (for event-driven communication)
