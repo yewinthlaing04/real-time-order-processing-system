@@ -19,7 +19,11 @@ Docker & Kubernetes (for deployment)
 🔹 Microservices Involved
 
 1️⃣ Order Service → Places new orders (produces Kafka events)
+
 2️⃣ Inventory Service → Manages stock levels (consumes events, updates stock)
+
 3️⃣ Payment Service → Processes payments (consumes events, confirms payments)
+
 4️⃣ Shipping Service → Handles delivery logistics (consumes events for order shipment)
+
 5️⃣ Notification Service → Sends order status updates via email/SMS (consumes events)
