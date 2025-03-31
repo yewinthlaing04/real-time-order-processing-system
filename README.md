@@ -24,10 +24,10 @@ Docker & Kubernetes (for deployment)
 
 1️⃣ Order Service → Places new orders (produces Kafka events)
 
-2️⃣ Inventory Service → Manages stock levels (consumes events, updates stock)
+2️⃣ User Service → Manages user CRUD (add user, update user)
 
 3️⃣ Payment Service → Processes payments (consumes events, confirms payments)
 
-4️⃣ Shipping Service → Handles delivery logistics (consumes events for order shipment)
+4️⃣ Product Service → Handles order list (add order, command order )
 
 5️⃣ Notification Service → Sends order status updates via email/SMS (consumes events)
